@@ -4,10 +4,33 @@
 <head>
     <meta charset="utf-8">
     <title>Odin Calculator</title>
-    <link rel="stylesheet.css" href="index.css">
+    <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 
-<body>Boilerplate</body>
+<body>
+    <div id="main-frame">
+        <div id="one-liner">3 + 3 = 6</div>
+        <div id="button-container">
+            <script>
+                const btnContainer = document.querySelector("#button-container");
+                for (let i = 0; i <= 9; i++) {
+                    const newButton = document.createElement("button");
+                    newButton.textContent = `${i}`
+                    btnContainer.appendChild(newButton);
+                    newButton.classList.add("button-calculator")
+                }
+                const extraButtons = ["+", "-", "x", "%", "=", "clear"];
+                for (op of extraButtons) {
+                    const newButton = document.createElement("button");
+                    newButton.textContent = op
+                    btnContainer.appendChild(newButton);
+                    newButton.classList.add("button-calculator")
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
 
 </html>
