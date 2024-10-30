@@ -10,7 +10,7 @@
 
 <body>
     <div id="main-frame">
-        <div id="one-liner">3 + 3 = 6</div>
+        <div id="one-liner"></div>
         <div id="button-container">
             <script>
                 const btnContainer = document.querySelector("#button-container");
@@ -20,12 +20,17 @@
                     btnContainer.appendChild(newButton);
                     newButton.classList.add("button-calculator")
                 }
-                const extraButtons = ["+", "-", "x", "%", "=", "clear"];
+                const newButton = document.createElement("button");
+                newButton.textContent = "."
+                btnContainer.appendChild(newButton);
+                newButton.classList.add("button-special");
+                newButton.classList.add("button-operator");
+                const extraButtons = ["+", "-", "x", "/", "=", "clear", "<-"];
                 for (op of extraButtons) {
                     const newButton = document.createElement("button");
                     newButton.textContent = op
                     btnContainer.appendChild(newButton);
-                    newButton.classList.add("button-calculator")
+                    newButton.classList.add("button-operator")
                 }
             </script>
         </div>

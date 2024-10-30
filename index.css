@@ -50,7 +50,8 @@ body {
     font-size: 30px;
 }
 
-.button-calculator {
+.button-calculator,
+.button-operator {
     height: 70px;
     width: 70px;
     margin: 1px;
